@@ -5,22 +5,23 @@
 ### Instrucciones paso a paso
 1. **Abre una terminal en la carpeta del proyecto.**
 
-2. **Crea un ambiente virtual de Python:**
+2. **Instala uv (si no lo tienes instalado):**
     ```powershell
-    python -m venv .venv
+    pip install uv
     ```
-    Ejecuta este comando en la terminal de Windows PowerShell o CMD.
+    `uv` es el manejador de paquetes utilizado en este proyecto.
 
-3. **Activa el ambiente virtual:**
+3. **Crea el ambiente virtual e instala las dependencias:**
+    ```powershell
+    uv sync
+    ```
+    Este comando crea automáticamente el ambiente virtual `.venv` e instala todas las dependencias necesarias.
+
+4. **Activa el ambiente virtual:**
     ```powershell
     .venv\Scripts\activate
     ```
     (En PowerShell o CMD, dentro de la carpeta del proyecto)
-
-4. **Instala la librería yt-dlp dentro del ambiente virtual:**
-    ```powershell
-    pip install yt-dlp
-    ```
 
 
 5. **Instala FFmpeg:**
@@ -48,6 +49,13 @@
 
 7. **(Opcional)** Si tienes problemas para ejecutar yt-dlp, asegúrate de que la ruta de yt-dlp esté incluida en la variable de entorno `PATH` de tu sistema.
 
+[Imagen de ayuda 1](help_addpath_1.png)
+
+[Imagen de ayuda 2](help_addpath_2.png)
+
+[Imagen de ayuda 3](help_addpath_3.png)
+
+
 8. **Ejecuta el programa:**
     ```powershell
     python main.py
@@ -71,20 +79,21 @@
 ## Download mp3 from YouTube using the yt-dlp library and FFmpeg
 ### Step-by-step instructions
 1. **Open a terminal in the project folder.**
-2. **Create a Python virtual environment:**
-```powershell
-    python -m venv .venv
+2. **Install uv (if not already installed):**
+    ```powershell
+    pip install uv
     ```
-Run this command in the Windows PowerShell or CMD terminal.
-3. **Activate the virtual environment:**
-```powershell
-.venv\Scripts\activate
-```
-(In PowerShell or CMD, inside the project folder)
-4. **Install the yt-dlp library inside the virtual environment:**
-```powershell
-pip install yt-dlp
-```
+    `uv` is the package manager used in this project.
+3. **Create the virtual environment and install dependencies:**
+    ```powershell
+    uv sync
+    ```
+    This command automatically creates the `.venv` virtual environment and installs all required dependencies.
+4. **Activate the virtual environment:**
+    ```powershell
+    .venv\Scripts\activate
+    ```
+    (In PowerShell or CMD, inside the project folder)
 
 5. **Install FFmpeg:**
     Run the following command in a Windows terminal (PowerShell or CMD):
@@ -108,6 +117,13 @@ ffmpeg -version
 ```
 If you see FFmpeg information, it is already correctly configured.
 7. **(Optional)** If you have trouble running yt-dlp, make sure the path to yt-dlp is included in your system's `PATH` environment variable.
+
+[Support image 1](help_addpath_1.png)
+
+[Support image 2](help_addpath_2.png)
+
+[Support image 3](help_addpath_3.png)
+
 8. **Run the program:**
 ```powershell
 python main.py

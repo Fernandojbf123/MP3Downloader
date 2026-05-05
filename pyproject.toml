@@ -1,0 +1,10 @@
+[project]
+name = "mp3downloader"
+version = "0.1.0"
+description = "A tool to download songs from YouTube as MP3 files"
+readme = "README.md"
+requires-python = "==3.14.4"
+dependencies = [
+    "yt-dlp==2026.3.17",
+]
+    
